@@ -13,7 +13,7 @@ creates `pkginstalls.txt`.  Then get a list of *manually* installed packages usi
 
     comm -23 <(aptitude search '~i !~M' -F '%p' | sed "s/ *$//" | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u) >del.lst
 
-which creates del.lst. Then extract the the subset of packages with their date which were manually installed:
+which creates del.lst. Then extract (imprecise but sufficient) the the subset of packages with their date which were manually installed:
 
     grep -f del.lst pkginstalls.txt >subset.A.txt
 
