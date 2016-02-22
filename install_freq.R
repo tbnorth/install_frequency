@@ -14,10 +14,12 @@ all$which = as.factor(all$which)
 summary(stats)
 str(all)
 
-pdf("installs.pdf")
+png("install_freq.png", 1024, 768)
+par(cex = 1.4)
 plot(all$date, all$count, col=all$which, 
   main="Package installs over time (new packages only, updates excluded)",
-  xlab="Date (2015-2016)", ylab="Packages installed", type='h', xaxt = "n")
+  xlab="Date (2015-2016)", ylab="Packages installed", 
+  type='h', xaxt = "n")
   
 points(all$date, all$count, col=all$which, pch=20)
 
