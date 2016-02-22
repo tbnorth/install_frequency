@@ -17,16 +17,13 @@ which creates del.lst. Then extract the the subset of packages with their date w
 
     grep -f del.lst pkginstalls.txt >subset.A.txt
 
-Finally [install_freq.R](./install_freq.R) is used to make this plot:
-
-![Installation frequency](./install_freq.png)
-
-and report these statistics:
+Finally [install_freq.R](./install_freq.R) is used to report these statistics
+on the interval between installations (in days):
 
     Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
     1.000   2.979   5.000   7.242   9.521  38.000 
 
-on the interfal between installations (in days).
+And make this plot:
 
+![Installation frequency](./install_freq.png)
 
-  
