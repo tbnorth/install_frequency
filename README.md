@@ -4,7 +4,7 @@ Plot / analyze frequency of manual package installation on Ubuntu
 To measure the frequency at which package installation is necessary on Ubuntu machines, the following steps were taken:
 
 Get a list of installed packages *by date* with [pkginstalls.sh](https://help.ubuntu.com/community/ListInstalledPackagesByDate) 
-(in case that link breaks, here's a [local copy](./pkginstalls.sh).
+(in case that link breaks, here's a [local copy](./pkginstalls.sh)).
 
     bash pkginstalls.sh
 
